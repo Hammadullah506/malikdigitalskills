@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hammadullah | Full Stack Developer &amp; Software Engineer • 3D Galaxy Portfolio</title>
+  
+  <!-- SEO & OpenGraph Meta Tags -->
+  <meta name="description" content="Official Portfolio of Hammadullah — Full Stack Software Engineer, Web Architect, and Creative Technologist building high-performance modern web apps, scalable APIs, and 3D WebGL experiences.">
+  <meta name="keywords" content="Hammadullah, Hammadullah506, Full Stack Developer, Software Engineer, Web Development, React, Next.js, Node.js, Three.js, WebGL, Malik Digital Skills">
+  <meta name="author" content="Hammadullah">
+  <meta property="og:title" content="Hammadullah | Full Stack Developer &amp; Web Architect">
+  <meta property="og:description" content="Explore the developer universe crafted by Hammadullah. Full Stack Engineering, Three.js 3D WebGL, and Next-Gen Web Solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Hammadullah506">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom Celestial Stardust Cursor -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Background 3D Three.js Galaxy Canvas -->
+  <div id="galaxy-canvas-container">
+    <canvas id="galaxy-canvas"></canvas>
+  </div>
+  <div class="cosmic-overlay" aria-hidden="true"></div>
+  <div class="cosmic-grid" aria-hidden="true"></div>
+
+  <!-- Holographic Navigation Header (HUD) -->
+  <header class="hud-navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="cosmic-brand">
+        <div class="brand-icon-wrap">
+          <div class="brand-core"></div>
+          <div class="brand-ring"></div>
+        </div>
+        <span class="brand-text">HAMMADULLAH</span>
+        <span class="brand-suffix">3D.DEV</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#about" class="nav-link"><span class="nav-link-num">01.</span> Orbit Log</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link"><span class="nav-link-num">02.</span> Constellations</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link"><span class="nav-link-num">03.</span> Deep Space Artifacts</a></li>
+          <li class="nav-item"><a href="#lab" class="nav-link"><span class="nav-link-num">04.</span> Warp Core</a></li>
+          <li class="nav-item"><a href="#experience" class="nav-link"><span class="nav-link-num">05.</span> Odyssey</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link"><span class="nav-link-num">06.</span> Transmission</a></li>
+        </ul>
+      </nav>
+
+      <!-- HUD Controls: Audio Synthesizer & Theme Toggle -->
+      <div class="hud-controls">
+        <button id="audio-toggle-btn" class="hud-btn" title="Toggle Cosmic Ambience (Web Audio)" aria-label="Toggle Cosmic Soundscape">
+          <div class="audio-visualizer-bars">
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+            <span class="audio-bar"></span>
+          </div>
+        </button>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle Mobile Navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main id="content-wrapper">
+
+    <!-- ==========================================================================
+         HERO SECTION: GALACTIC CORE
+         ========================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-content">
+        
+        <!-- Holographic Beacon Badge -->
+        <div class="holo-badge">
+          <span class="beacon-pulse"></span>
+          <span class="badge-text">SECTOR 7 • FULL STACK & CREATIVE ARCHITECT</span>
+        </div>
+
+        <!-- Name Title -->
+        <h1 class="hero-title">
+          <span class="name-glow">HAMMADULLAH</span>
+        </h1>
+
+        <!-- Typing Dynamic Subtitle -->
+        <div class="hero-subtitle">
+          <span>Commanding Digital Realities as</span>
+          <span class="typing-text">Full Stack Web Architect</span>
+        </div>
+
+        <!-- Bio Description -->
+        <p class="hero-description">
+          Bridging computational engineering with celestial 3D web experiences. Crafting scalable full-stack applications, intelligent AI architectures, and interactive WebGL worlds that transcend ordinary digital horizons.
+        </p>
+
+        <!-- Starship Telemetry HUD Widget -->
+        <div class="hero-telemetry-hud">
+          <div class="telemetry-item">
+            <i class="fas fa-satellite telemetry-icon"></i>
+            <span>Coordinates: <strong class="telemetry-val">Milky Way • Sector 7</strong></span>
+          </div>
+          <div class="telemetry-item">
+            <i class="fas fa-bolt telemetry-icon"></i>
+            <span>Warp Core: <strong class="telemetry-val">100% Nominal</strong></span>
+          </div>
+          <div class="telemetry-item">
+            <i class="fas fa-signal telemetry-icon"></i>
+            <span>Status: <strong class="telemetry-val" style="color:var(--neon-emerald);">Ready for Missions</strong></span>
+          </div>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="hero-actions">
+          <a href="#projects" class="cosmic-btn-primary">
+            <i class="fas fa-rocket"></i> Explore Artifacts
+          </a>
+          <a href="#contact" class="cosmic-btn-secondary">
+            <i class="fas fa-paper-plane"></i> Initiate Uplink
+          </a>
+        </div>
+
+        <!-- Scroll Mouse Indicator -->
+        <a href="#about" class="scroll-orbit-indicator" aria-label="Scroll Down to About Section">
+          <div class="orbit-mouse">
+            <div class="orbit-wheel"></div>
+          </div>
+          <span>Scroll Orbit</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT SECTION: ORBITAL TELEMETRY & CAPTAIN'S LOG
+         ========================================================================== -->
+    <section id="about" class="cosmic-section">
+      <div class="container">
+        
+        <div class="section-header cosmic-reveal">
+          <span class="section-tag"><i class="fas fa-compass"></i> Mission Briefing</span>
+          <h2 class="section-title">Captain's Log & <span class="text-gradient">Telemetry</span></h2>
+          <p class="section-subtitle">A synthesis of analytical precision and cosmic creative vision.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Glassmorphic Terminal Card -->
+          <div class="about-holo-card cosmic-reveal">
+            <div class="card-header-bar">
+              <div class="card-hud-lights">
+                <span class="hud-light red"></span>
+                <span class="hud-light yellow"></span>
+                <span class="hud-light green"></span>
+              </div>
+              <span class="card-hud-title">TRANSMISSION_LOG_V2.04</span>
+            </div>
+
+            <p class="about-bio-text">
+              Greetings, Space Traveler. I am <strong>Hammadullah</strong>, a passionate <strong>Full Stack Engineer</strong> and <strong>Creative Technologist</strong> dedicated to engineering lightning-fast, high-reliability web applications.
+            </p>
+            <p class="about-bio-text">
+              My journey navigates through building resilient backend microservices, intuitive modern user interfaces, and interactive 3D WebGL scenes. With a relentless focus on clean code architecture and visual excellence, I transform complex ideas into extraordinary digital products.
+            </p>
+
+            <div class="about-focus-tags">
+              <span class="focus-pill"><i class="fas fa-layer-group"></i> Full Stack Development</span>
+              <span class="focus-pill"><i class="fas fa-cube"></i> Three.js / WebGL</span>
+              <span class="focus-pill"><i class="fas fa-brain"></i> AI & Neural Integrations</span>
+              <span class="focus-pill"><i class="fas fa-cloud"></i> Cloud Architecture</span>
+            </div>
+          </div>
+
+          <!-- Real-Time Metrics Stats Grid -->
+          <div class="about-stats-grid cosmic-reveal">
+            <div class="stat-telemetry-box">
+              <div class="stat-num-wrap">
+                <span class="stat-counter" data-target="40">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <p class="stat-label">Cosmic Missions Completed</p>
+            </div>
+
+            <div class="stat-telemetry-box">
+              <div class="stat-num-wrap">
+                <span class="stat-counter" data-target="99">0</span>
+                <span class="stat-plus">.9%</span>
+              </div>
+              <p class="stat-label">Orbit Uptime & Quality</p>
+            </div>
+
+            <div class="stat-telemetry-box">
+              <div class="stat-num-wrap">
+                <span class="stat-counter" data-target="3">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <p class="stat-label">Years Light-Speed Dev</p>
+            </div>
+
+            <div class="stat-telemetry-box">
+              <div class="stat-num-wrap">
+                <span class="stat-counter" data-target="15">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <p class="stat-label">Mastered Tech Constellations</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS SECTION: TECH CONSTELLATIONS
+         ========================================================================== */
+    <section id="skills" class="cosmic-section">
+      <div class="container">
+
+        <div class="section-header cosmic-reveal">
+          <span class="section-tag"><i class="fas fa-atom"></i> Arsenal & Stacks</span>
+          <h2 class="section-title">Tech <span class="text-gradient">Constellations</span></h2>
+          <p class="section-subtitle">Proficiencies forged across modern frontend, resilient backends, and creative 3D systems.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter-nav cosmic-reveal">
+          <button class="skill-tab-btn active" data-filter="all">All Constellations</button>
+          <button class="skill-tab-btn" data-filter="frontend">Frontend Orbit</button>
+          <button class="skill-tab-btn" data-filter="backend">Backend Engines</button>
+          <button class="skill-tab-btn" data-filter="creative">3D & Creative Web</button>
+          <button class="skill-tab-btn" data-filter="cloud">Cloud & AI</button>
+        </div>
+
+        <!-- Skill Cards Grid -->
+        <div class="skills-constellation-grid">
+          
+          <!-- React / Next.js -->
+          <div class="skill-orb-card cosmic-reveal" data-category="frontend">
+            <div class="skill-card-top">
+              <div class="skill-icon-bubble"><i class="fab fa-react"></i></div>
+              <span class="skill-level-badge">95% Mastery</span>
+            </div>
+            <h3 class="skill-name">React & Next.js 14</h3>
+            <p class="skill-detail">Server Components, App Router, SSR, State Management</p>
+            <div class="skill-progress-bar-bg">
+              <div class="skill-progress-bar-fill" style="width: 95%;"></div>
+            </div>
+          </div>
+
+          <!-- JavaScript / TypeScript -->
+          <div class="skill-orb-card cosmic-reveal" data-category="frontend">
+            <div class="skill-card-top">
+              <div class="skill-icon-bubble"><i class="fab fa-js"></i></div>
+              <span class="skill-level-badge">92% Mastery</span>
+            </div>
+            <h3 class="skill-name">TypeScript & ES6+</h3>
+            <p class="skill-detail">Strict Typing, Generics, Async Architecture, Modern APIs</p>
+            <div class="skill-progress-bar-bg">
+              <div class="skill-progress-bar-fill" style="width: 92%;"></div>
+            </div>
+          </div>
+
+          <!-- Three.js & WebGL -->
+          <div class="skill-orb-card cosmic-reveal" data-category="creative">
+            <div class="skill-card-top">
+              <div class="skill-icon-bubble"><i class="fas fa-cubes"></i></div>
+              <span class="skill-level-badge">88% Mastery</span>
+            </div>
+            <h3 class="skill-name">Three.js & WebGL</h3>
+            <p class="skill-detail">Particle Clouds, Shaders, 3D Canvas, Physics & Cameras</p>
+            <div class="skill-progress-bar-bg">
+              <div class="skill-progress-bar-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- Node.js & Express -->
+          <div class="skill-orb-card cosmic-reveal" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon-bubble"><i class="fab fa-node-js"></i></div>
+              <span class="skill-level-badge">90% Mastery</span>
+            </div>
+            <h3 class="skill-name">Node.js & Express</h3>
+            <p class="skill-detail">RESTful APIs, Microservices, Authentication & JWT</p>
+            <div class="skill-progress-bar-bg">
+              <div class="skill-progress-bar-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <!-- Python & AI Integrations -->
+          <div class="skill-orb-card cosmic-reveal" data-category="cloud">
+            <div class="skill-card-top">
+              <div class="skill-icon-bubble"><i class="fab fa-python"></i></div>
+              <span class="skill-level-badge">85% Mastery</span>
+            </div>
+            <h3 class="skill-name">Python & AI / LLMs</h3>
+            <p class="skill-detail">OpenAI API, LangChain, Vector Embeddings, FastApi</p>
+            <div class="skill-progress-bar-bg">
+              <div class="skill-progress-bar-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-orb-card cosmic-reveal" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon-bubble"><i class="fas fa-database"></i></div>
+              <span class="skill-level-badge">90% Mastery</span>
+            </div>
+            <h3 class="skill-name">PostgreSQL & MongoDB</h3>
+            <p class="skill-detail">Prisma ORM, Indexing, Data Aggregations, Redis Caching</p>
+            <div class="skill-progress-bar-bg">
+              <div class="skill-progress-bar-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+
+          <!-- Modern CSS & Glassmorphism -->
+          <div class="skill-orb-card cosmic-reveal" data-category="frontend">
+            <div class="skill-card-top">
+              <div class="skill-icon-bubble"><i class="fab fa-css3-alt"></i></div>
+              <span class="skill-level-badge">96% Mastery</span>
+            </div>
+            <h3 class="skill-name">Tailwind & Vanilla CSS</h3>
+            <p class="skill-detail">Responsive Flex/Grid, Keyframes, Custom UI Frameworks</p>
+            <div class="skill-progress-bar-bg">
+              <div class="skill-progress-bar-fill" style="width: 96%;"></div>
+            </div>
+          </div>
+
+          <!-- DevOps & Cloud Tools -->
+          <div class="skill-orb-card cosmic-reveal" data-category="cloud">
+            <div class="skill-card-top">
+              <div class="skill-icon-bubble"><i class="fab fa-docker"></i></div>
+              <span class="skill-level-badge">86% Mastery</span>
+            </div>
+            <h3 class="skill-name">Docker, Git & CI/CD</h3>
+            <p class="skill-detail">Containerization, GitHub Actions, Vercel & AWS Deployments</p>
+            <div class="skill-progress-bar-bg">
+              <div class="skill-progress-bar-fill" style="width: 86%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROJECTS SECTION: DEEP SPACE ARTIFACTS
+         ========================================================================== -->
+    <section id="projects" class="cosmic-section">
+      <div class="container">
+
+        <div class="section-header cosmic-reveal">
+          <span class="section-tag"><i class="fas fa-satellite-dish"></i> Stellar Showcase</span>
+          <h2 class="section-title">Deep Space <span class="text-gradient">Artifacts</span></h2>
+          <p class="section-subtitle">High-impact planetary projects deployed across the digital universe.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: Malik Digital Skills -->
+          <div class="project-planet-card cosmic-reveal">
+            <div class="project-banner-preview">
+              <img src="assets/malikdigital.svg" alt="Malik Digital Skills Platform" class="project-banner-img">
+              <span class="project-orbit-badge">EdTech / Full Stack</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-tags-list">
+                <span class="project-tag">React / Vite</span>
+                <span class="project-tag">Tailwind CSS</span>
+                <span class="project-tag">WhatsApp API</span>
+              </div>
+              <h3 class="project-title">Malik Digital Skills</h3>
+              <p class="project-description">
+                Modern digital education &amp; skills training institute platform featuring 11+ professional courses, interactive curriculum, live reviews, and WhatsApp admission automation.
+              </p>
+              <div class="project-footer-actions">
+                <button class="project-inspect-btn" data-project="malikdigital">
+                  <i class="fas fa-eye"></i> Telemetry Specs
+                </button>
+                <a href="https://malikdigitalskill.lovable.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <i class="fas fa-external-link-alt"></i> Live Orbit
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: NovaAI -->
+          <div class="project-planet-card cosmic-reveal">
+            <div class="project-banner-preview">
+              <img src="assets/nova.svg" alt="NovaAI Engine" class="project-banner-img">
+              <span class="project-orbit-badge">AI Platform</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-tags-list">
+                <span class="project-tag">Next.js 14</span>
+                <span class="project-tag">OpenAI</span>
+                <span class="project-tag">PostgreSQL</span>
+              </div>
+              <h3 class="project-title">NovaAI Neural Engine</h3>
+              <p class="project-description">
+                Multimodal AI orchestration engine supporting streaming responses, vector memory retrieval, and dynamic code generation.
+              </p>
+              <div class="project-footer-actions">
+                <button class="project-inspect-btn" data-project="nova">
+                  <i class="fas fa-eye"></i> Telemetry Specs
+                </button>
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Orbit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Aetheria 3D -->
+          <div class="project-planet-card cosmic-reveal">
+            <div class="project-banner-preview">
+              <img src="assets/aetheria.svg" alt="Aetheria 3D Metaverse" class="project-banner-img">
+              <span class="project-orbit-badge">WebGL / 3D</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-tags-list">
+                <span class="project-tag">Three.js</span>
+                <span class="project-tag">GLSL</span>
+                <span class="project-tag">Web Audio</span>
+              </div>
+              <h3 class="project-title">Aetheria 3D Metaverse</h3>
+              <p class="project-description">
+                Interactive spatial web exploration with celestial planetary terrains, GLSL atmospheric shaders, and binaural audio synthesis.
+              </p>
+              <div class="project-footer-actions">
+                <button class="project-inspect-btn" data-project="aetheria">
+                  <i class="fas fa-eye"></i> Telemetry Specs
+                </button>
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Orbit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: QuantumCommerce -->
+          <div class="project-planet-card cosmic-reveal">
+            <div class="project-banner-preview">
+              <img src="assets/quantum.svg" alt="QuantumCommerce" class="project-banner-img">
+              <span class="project-orbit-badge">Full Stack</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-tags-list">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">MongoDB</span>
+              </div>
+              <h3 class="project-title">QuantumCommerce</h3>
+              <p class="project-description">
+                Ultra-fast headless e-commerce ecosystem with instant 3D product visualizer, automated Stripe checkout, and inventory telemetry.
+              </p>
+              <div class="project-footer-actions">
+                <button class="project-inspect-btn" data-project="quantum">
+                  <i class="fas fa-eye"></i> Telemetry Specs
+                </button>
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Orbit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Chronos Nexus -->
+          <div class="project-planet-card cosmic-reveal">
+            <div class="project-banner-preview">
+              <img src="assets/chronos.svg" alt="Chronos Nexus" class="project-banner-img">
+              <span class="project-orbit-badge">Cloud / DevOps</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-tags-list">
+                <span class="project-tag">Golang</span>
+                <span class="project-tag">Docker</span>
+                <span class="project-tag">GraphQL</span>
+              </div>
+              <h3 class="project-title">Chronos Nexus DevOps</h3>
+              <p class="project-description">
+                Real-time observability hub with distributed microservice telemetry, high-throughput WebSocket streams, and topology graphs.
+              </p>
+              <div class="project-footer-actions">
+                <button class="project-inspect-btn" data-project="chronos">
+                  <i class="fas fa-eye"></i> Telemetry Specs
+                </button>
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Orbit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: CyberPulse -->
+          <div class="project-planet-card cosmic-reveal">
+            <div class="project-banner-preview">
+              <img src="assets/cyberpulse.svg" alt="CyberPulse Web3" class="project-banner-img">
+              <span class="project-orbit-badge">Web3 / DApp</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-tags-list">
+                <span class="project-tag">Solidity</span>
+                <span class="project-tag">Ethers.js</span>
+                <span class="project-tag">IPFS</span>
+              </div>
+              <h3 class="project-title">CyberPulse Web3 Hub</h3>
+              <p class="project-description">
+                Decentralized digital asset management portal featuring multi-wallet connectivity, smart contract verification, and token swaps.
+              </p>
+              <div class="project-footer-actions">
+                <button class="project-inspect-btn" data-project="cyberpulse">
+                  <i class="fas fa-eye"></i> Telemetry Specs
+                </button>
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Orbit</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Starlight Studio -->
+          <div class="project-planet-card cosmic-reveal">
+            <div class="project-banner-preview">
+              <img src="assets/starlight.svg" alt="Starlight Studio" class="project-banner-img">
+              <span class="project-orbit-badge">Creative Agency</span>
+            </div>
+            <div class="project-content-body">
+              <div class="project-tags-list">
+                <span class="project-tag">HTML5/CSS3</span>
+                <span class="project-tag">GSAP</span>
+                <span class="project-tag">Canvas</span>
+              </div>
+              <h3 class="project-title">Starlight Studio</h3>
+              <p class="project-description">
+                Award-winning digital agency showcase crafted with fluid physics-based animations, magnetic cursor controls, and 0.4s load speed.
+              </p>
+              <div class="project-footer-actions">
+                <button class="project-inspect-btn" data-project="starlight">
+                  <i class="fas fa-eye"></i> Telemetry Specs
+                </button>
+                <a href="#" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Orbit</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE SPACE LAB: WARP CORE CONTROLS
+         ========================================================================== -->
+    <section id="lab" class="cosmic-section">
+      <div class="container">
+
+        <div class="section-header cosmic-reveal">
+          <span class="section-tag"><i class="fas fa-sliders-h"></i> Interactive Lab</span>
+          <h2 class="section-title">Warp Core <span class="text-gradient">Controller</span></h2>
+          <p class="section-subtitle">Directly manipulate the Three.js 3D galaxy physics and cosmic nebula spectrum in real-time.</p>
+        </div>
+
+        <div class="warp-lab-container cosmic-reveal">
+          <div class="lab-controls-grid">
+
+            <!-- Galaxy Speed Multiplier -->
+            <div class="lab-control-card">
+              <h3 class="lab-control-title">
+                <i class="fas fa-tachometer-alt"></i> Galaxy Spin Velocity
+              </h3>
+              <div class="cosmic-slider-wrap">
+                <input type="range" id="warp-speed-slider" class="cosmic-range-slider" min="0.2" max="4.0" step="0.1" value="1.0">
+                <div class="slider-metrics">
+                  <span>Cruising (0.2x)</span>
+                  <span id="warp-speed-val" class="slider-val-readout">1.0x Warp</span>
+                  <span>Hyper (4.0x)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Nebula Color Preset Picker -->
+            <div class="lab-control-card">
+              <h3 class="lab-control-title">
+                <i class="fas fa-palette"></i> Nebula Spectrum Theme
+              </h3>
+              <div class="theme-selector-swatches">
+                <button class="swatch-btn active" data-theme="cyan">
+                  <span class="swatch-color-dot" style="background:#00f2fe; box-shadow:0 0 8px #00f2fe;"></span>
+                  <span>Supernova Cyan</span>
+                </button>
+                <button class="swatch-btn" data-theme="magenta">
+                  <span class="swatch-color-dot" style="background:#ff007f; box-shadow:0 0 8px #ff007f;"></span>
+                  <span>Cosmic Magenta</span>
+                </button>
+                <button class="swatch-btn" data-theme="gold">
+                  <span class="swatch-color-dot" style="background:#ffb703; box-shadow:0 0 8px #ffb703;"></span>
+                  <span>Solar Flare</span>
+                </button>
+                <button class="swatch-btn" data-theme="emerald">
+                  <span class="swatch-color-dot" style="background:#00ffcc; box-shadow:0 0 8px #00ffcc;"></span>
+                  <span>Void Emerald</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXPERIENCE SECTION: COSMIC ODYSSEY (TIMELINE)
+         ========================================================================== -->
+    <section id="experience" class="cosmic-section">
+      <div class="container">
+
+        <div class="section-header cosmic-reveal">
+          <span class="section-tag"><i class="fas fa-route"></i> Career Flight Path</span>
+          <h2 class="section-title">Cosmic <span class="text-gradient">Odyssey</span></h2>
+          <p class="section-subtitle">A chronological timeline of milestones, engineering breakthroughs, and technical leadership.</p>
+        </div>
+
+        <div class="timeline-track">
+
+          <!-- Milestone 1 -->
+          <div class="timeline-node-item cosmic-reveal">
+            <div class="timeline-pulsar-dot"></div>
+            <div class="timeline-card-box">
+              <span class="timeline-date-tag">2024 - PRESENT</span>
+              <h3 class="timeline-role-title">Lead Full Stack & 3D Web Architect</h3>
+              <div class="timeline-org-name">Deep Space Digital Solutions</div>
+              <p class="timeline-summary">
+                Directing architecture of enterprise full-stack web applications, integrating AI inference models, and pioneering high-performance Three.js interactive visualizers for international clients.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-node-item cosmic-reveal">
+            <div class="timeline-pulsar-dot"></div>
+            <div class="timeline-card-box">
+              <span class="timeline-date-tag">2023 - 2024</span>
+              <h3 class="timeline-role-title">Senior Frontend & Creative Developer</h3>
+              <div class="timeline-org-name">Nova Interactive Labs</div>
+              <p class="timeline-summary">
+                Engineered complex React & Next.js ecosystems, optimized sub-second page performance, and crafted rich motion graphics and shaders with 60 FPS mobile consistency.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-node-item cosmic-reveal">
+            <div class="timeline-pulsar-dot"></div>
+            <div class="timeline-card-box">
+              <span class="timeline-date-tag">2022 - 2023</span>
+              <h3 class="timeline-role-title">Full Stack Software Engineer</h3>
+              <div class="timeline-org-name">Malik Digital Innovations</div>
+              <p class="timeline-summary">
+                Developed full-stack web platforms, REST APIs, and database schemas with Node.js and PostgreSQL. Spearheaded agile sprints and microservice containerization with Docker.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TESTIMONIALS SECTION: STELLAR TRANSMISSIONS
+         ========================================================================== -->
+    <section id="testimonials" class="cosmic-section">
+      <div class="container">
+
+        <div class="section-header cosmic-reveal">
+          <span class="section-tag"><i class="fas fa-broadcast-tower"></i> Client Beacons</span>
+          <h2 class="section-title">Stellar <span class="text-gradient">Transmissions</span></h2>
+          <p class="section-subtitle">Signals recorded from mission commanders and global project partners.</p>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <div class="transmission-beacon-card cosmic-reveal">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-message">
+              "Hammadullah delivered our web platform with jaw-dropping 3D visuals and blistering speed. His engineering capability and creative touch set a whole new standard for our brand."
+            </p>
+            <div class="testimonial-author-wrap">
+              <div class="author-avatar">AL</div>
+              <div>
+                <h4 class="author-name">Alexander Lane</h4>
+                <p class="author-designation">CTO, Hyperion SpaceTech</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="transmission-beacon-card cosmic-reveal">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-message">
+              "Working with Hammadullah was seamless. From clean architecture to thoughtful UI micro-animations, every single milestone was executed ahead of time with zero bugs."
+            </p>
+            <div class="testimonial-author-wrap">
+              <div class="author-avatar">SR</div>
+              <div>
+                <h4 class="author-name">Sarah Reynolds</h4>
+                <p class="author-designation">Product Director, Aether Studios</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="transmission-beacon-card cosmic-reveal">
+            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-message">
+              "An extraordinary developer with rare mastery of both complex backend engineering and cutting-edge 3D WebGL aesthetics. Highly recommended!"
+            </p>
+            <div class="testimonial-author-wrap">
+              <div class="author-avatar">MK</div>
+              <div>
+                <h4 class="author-name">Marcus Vance</h4>
+                <p class="author-designation">Founder, Orbit Digital Labs</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION: DEEP SPACE TRANSMISSION UPLINK
+         ========================================================================== -->
+    <section id="contact" class="cosmic-section">
+      <div class="container">
+
+        <div class="section-header cosmic-reveal">
+          <span class="section-tag"><i class="fas fa-satellite"></i> Comms Frequency</span>
+          <h2 class="section-title">Deep Space <span class="text-gradient">Uplink</span></h2>
+          <p class="section-subtitle">Have a vision or mission in mind? Broadcast your message across the cosmic network.</p>
+        </div>
+
+        <div class="contact-uplink-grid">
+
+          <!-- Direct Comms Info -->
+          <div class="contact-comms-info cosmic-reveal">
+            
+            <a href="mailto:hammadullahnaseeb@gmail.com" class="comms-channel-card">
+              <div class="comms-icon-wrap"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="comms-label">Subspace Frequency (Email)</div>
+                <div class="comms-value">hammadullahnaseeb@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/Hammadullah506" target="_blank" rel="noopener noreferrer" class="comms-channel-card">
+              <div class="comms-icon-wrap"><i class="fab fa-github"></i></div>
+              <div>
+                <div class="comms-label">Code Repository (GitHub)</div>
+                <div class="comms-value">github.com/Hammadullah506</div>
+              </div>
+            </a>
+
+            <a href="https://wa.me/923475765612" target="_blank" rel="noopener noreferrer" class="comms-channel-card">
+              <div class="comms-icon-wrap"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <div class="comms-label">Instant Hyper-Link (WhatsApp)</div>
+                <div class="comms-value">+92 347 5765612</div>
+              </div>
+            </a>
+
+            <a href="https://malikdigitalskill.lovable.app/" target="_blank" rel="noopener noreferrer" class="comms-channel-card">
+              <div class="comms-icon-wrap"><i class="fas fa-globe"></i></div>
+              <div>
+                <div class="comms-label">Live Platform Project</div>
+                <div class="comms-value">malikdigitalskill.lovable.app</div>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- Futuristic Holographic Form -->
+          <div class="terminal-form-card cosmic-reveal">
+            <div class="card-header-bar">
+              <div class="card-hud-lights">
+                <span class="hud-light red"></span>
+                <span class="hud-light yellow"></span>
+                <span class="hud-light green"></span>
+              </div>
+              <span class="card-hud-title">SECURE_COMM_ENCRYPTION_AES256</span>
+            </div>
+
+            <form id="cosmic-transmission-form">
+              <div class="form-group">
+                <label for="comms-name" class="form-label">Commander Name / Identity</label>
+                <input type="text" id="comms-name" class="holo-input" placeholder="e.g. Captain Sarah Connor" required>
+              </div>
+
+              <div class="form-group">
+                <label for="comms-email" class="form-label">Subspace Coordinate (Email)</label>
+                <input type="email" id="comms-email" class="holo-input" placeholder="e.g. sarah@enterprise.io" required>
+              </div>
+
+              <div class="form-group">
+                <label for="comms-subject" class="form-label">Mission Directive (Subject)</label>
+                <input type="text" id="comms-subject" class="holo-input" placeholder="e.g. Full Stack Web Application Development">
+              </div>
+
+              <div class="form-group">
+                <label for="comms-message" class="form-label">Transmission Signal (Message)</label>
+                <textarea id="comms-message" class="holo-textarea" placeholder="Detail your project mission parameters, timelines, and requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="form-submit-btn">
+                <i class="fas fa-paper-plane"></i> Broadcast Signal to Hammadullah
+              </button>
+
+              <div id="transmission-status" class="transmission-status-msg"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER: GALACTIC RADAR
+       ========================================================================== -->
+  <footer class="cosmic-footer">
+    <div class="container footer-content">
+      <div class="footer-copy">
+        &copy; 2026 <strong>HAMMADULLAH</strong> • Full Stack Software Engineer &amp; Web Architect.
+      </div>
+
+      <div class="footer-social-links">
+        <a href="https://github.com/Hammadullah506" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/923475765612" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://malikdigitalskill.lovable.app/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Malik Digital Skills Platform"><i class="fas fa-globe"></i></a>
+        <a href="mailto:hammadullahnaseeb@gmail.com" class="footer-social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+
+      <a href="#hero" class="warp-top-btn" aria-label="Warp back to top">
+        <i class="fas fa-rocket"></i> Warp to Orbit
+      </a>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT DETAIL DEEP-DIVE MODAL
+       ========================================================================== -->
+  <div id="project-modal" class="cosmic-modal-backdrop" aria-hidden="true" role="dialog">
+    <div class="cosmic-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      <div id="modal-dynamic-content">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Three.js Library CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Modular Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/galaxy.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

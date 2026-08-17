@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-quantum" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021b1b" />
+      <stop offset="50%" stop-color="#080321" />
+      <stop offset="100%" stop-color="#030014" />
+    </linearGradient>
+    <linearGradient id="emerald-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ffcc" />
+      <stop offset="100%" stop-color="#00f2fe" />
+    </linearGradient>
+    <filter id="glow-emerald" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg-quantum)" />
+
+  <!-- Holographic Hexagon Grid -->
+  <g opacity="0.35" stroke="#00ffcc" stroke-width="1.5" fill="none">
+    <polygon points="350,180 400,150 450,180 450,240 400,270 350,240" />
+    <polygon points="250,180 300,150 350,180 350,240 300,270 250,240" />
+    <polygon points="450,180 500,150 550,180 550,240 500,270 450,240" />
+    <polygon points="300,90 350,60 400,90 400,150 350,180 300,150" />
+    <polygon points="400,90 450,60 500,90 500,150 450,180 400,150" />
+  </g>
+
+  <circle cx="400" cy="210" r="45" fill="url(#emerald-grad)" filter="url(#glow-emerald)" opacity="0.85" />
+  <text x="400" y="218" font-family="'Orbitron', sans-serif" font-size="28" font-weight="900" fill="#030014" text-anchor="middle">QC</text>
+
+  <text x="400" y="380" font-family="'Orbitron', sans-serif" font-size="22" font-weight="700" fill="#00ffcc" text-anchor="middle" letter-spacing="4" filter="url(#glow-emerald)">QUANTUM COMMERCE</text>
+</svg>
