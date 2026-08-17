@@ -2705,10 +2705,72 @@ body {
   }
 
   .about-stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
   }
 
   .theme-selector-swatches {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding: 0 10px !important;
+  }
+
+  .hud-navbar {
+    padding: 0 8px;
+  }
+
+  .cosmic-brand {
+    font-size: 0.88rem;
+  }
+
+  .hologram-3d-scene {
+    width: 165px;
+    height: 165px;
+  }
+
+  .hologram-circle-3d {
+    width: 135px;
+    height: 135px;
+    min-width: 135px;
+    min-height: 135px;
+    max-width: 135px;
+    max-height: 135px;
+  }
+
+  .portrait-orbital-ring.ring-1 { width: 155px; height: 155px; }
+  .portrait-orbital-ring.ring-2 { width: 175px; height: 175px; }
+
+  .floating-badge {
+    display: none !important;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .stat-counter {
+    font-size: 1.4rem !important;
+  }
+
+  .about-holo-card,
+  .terminal-form-card,
+  .skill-orb-card,
+  .project-planet-card,
+  .transmission-beacon-card,
+  .timeline-card-box {
+    padding: 1rem 0.85rem !important;
+  }
+
+  .comms-channel-card {
+    padding: 10px 8px !important;
   }
 }
