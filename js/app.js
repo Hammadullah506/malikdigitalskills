@@ -575,7 +575,7 @@ function initPortrait3DTilt() {
   scene.addEventListener('mouseleave', () => {
     card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
     setTimeout(() => {
-      card.style.animation = 'float3DCard 6s ease-in-out infinite alternate';
+      card.style.animation = 'float3DCircle 5s ease-in-out infinite alternate';
     }, 300);
   });
 }
