@@ -1085,9 +1085,11 @@ body {
    ========================================================================== */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 32px;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-holo-card {
@@ -1095,11 +1097,13 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--bg-card-border);
   border-radius: var(--radius-lg);
-  padding: 36px;
+  padding: 32px;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   transition: var(--transition-smooth);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-holo-card:hover {
@@ -2461,7 +2465,7 @@ body {
     word-break: break-all !important;
   }
 
-  /* About Section: Stack Bio Card & Stats Grid Vertically on Mobile */
+  /* About Section: Full Single-Column Flow */
   .about-grid {
     display: flex !important;
     flex-direction: column !important;
@@ -2475,29 +2479,56 @@ body {
     width: 100% !important;
     max-width: 100% !important;
     padding: 1.5rem 1.25rem !important;
+    margin: 0 !important;
     box-sizing: border-box !important;
+  }
+
+  .about-bio-text {
+    font-size: 0.94rem !important;
+    line-height: 1.65 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .about-focus-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .focus-pill {
+    font-size: 0.76rem !important;
+    padding: 6px 12px !important;
+    line-height: 1.3 !important;
   }
 
   .about-stats-grid {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 12px !important;
+    gap: 10px !important;
     width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box !important;
   }
 
   .stat-telemetry-box {
     width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box !important;
-    padding: 14px 12px !important;
+    padding: 14px 10px !important;
   }
 
   .stat-counter {
-    font-size: 1.8rem !important;
+    font-size: 1.65rem !important;
+  }
+
+  .stat-plus {
+    font-size: 1.1rem !important;
   }
 
   .stat-label {
-    font-size: 0.82rem !important;
+    font-size: 0.78rem !important;
+    line-height: 1.3 !important;
   }
 
   /* Skills & Projects & Testimonials Stack */
