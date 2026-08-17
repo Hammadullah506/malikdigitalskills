@@ -89,6 +89,7 @@ Designed with a sleek **Cosmic Glassmorphism HUD** aesthetic, this portfolio hig
 ```bash
 malikdigitalskills/
 ├── assets/
+│   ├── hammadullah.jpg    # 3D holographic circular portrait photo
 │   ├── malikdigital.svg   # Malik Digital Skills high-tech banner
 │   ├── nova.svg           # NovaAI project banner
 │   ├── aetheria.svg       # Aetheria 3D project banner
@@ -99,7 +100,7 @@ malikdigitalskills/
 ├── css/
 │   └── style.css          # Cosmic neon glassmorphism stylesheet & tokens
 ├── js/
-│   ├── app.js             # UI interactions, modals, typing effect, contact
+│   ├── app.js             # UI interactions, modals, typing effect, 3D tilt, contact
 │   ├── audio.js           # Web Audio API ambient cosmic soundscape synthesizer
 │   └── galaxy.js          # Three.js 3D galaxy particle simulation & warp engine
 ├── index.html             # Main entry point & semantic HTML5 structure
