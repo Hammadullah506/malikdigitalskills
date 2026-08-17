@@ -153,33 +153,42 @@ body {
 /* ==========================================================================
    CUSTOM CELESTIAL CURSOR
    ========================================================================== */
-.custom-cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  background: var(--neon-cyan);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 12px var(--neon-cyan);
-  transition: transform 0.05s ease, background-color 0.3s;
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--neon-cyan);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 12px var(--neon-cyan);
+    transition: transform 0.05s ease, background-color 0.3s;
+  }
+
+  .custom-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid rgba(56, 189, 248, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out, border-color 0.3s;
+  }
 }
 
-.custom-cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid rgba(0, 242, 254, 0.4);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, transform 0.15s ease-out;
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
 }
 
 .cursor-hover .custom-cursor-ring {
@@ -2361,6 +2370,47 @@ body {
     right: auto !important;
   }
 
+  .skills-filter-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .skill-tab-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .project-footer-actions {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .project-inspect-btn, .project-link-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .theme-selector-swatches {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .swatch-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 8px;
+    font-size: 0.78rem;
+  }
+
+  .scroll-orbit-indicator {
+    display: none !important;
+  }
+
   .cosmic-modal-card {
     padding: 20px 16px;
     max-height: 85vh;
@@ -2395,6 +2445,10 @@ body {
   }
 
   .about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-selector-swatches {
     grid-template-columns: 1fr;
   }
 }
