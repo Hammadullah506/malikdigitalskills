@@ -2461,24 +2461,63 @@ body {
     word-break: break-all !important;
   }
 
-  .skills-constellation-grid, .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 100%;
+  /* About Section: Stack Bio Card & Stats Grid Vertically on Mobile */
+  .about-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-holo-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.5rem 1.25rem !important;
+    box-sizing: border-box !important;
   }
 
   .about-stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .stat-telemetry-box {
-    padding: 14px 10px;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 14px 12px !important;
   }
 
   .stat-counter {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
+  }
+
+  .stat-label {
+    font-size: 0.82rem !important;
+  }
+
+  /* Skills & Projects & Testimonials Stack */
+  .skills-constellation-grid,
+  .projects-grid,
+  .testimonials-grid,
+  .lab-controls-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .skill-orb-card,
+  .project-planet-card,
+  .transmission-beacon-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   /* Timeline Single-Column Full Override (Resolves 50% Push) */
