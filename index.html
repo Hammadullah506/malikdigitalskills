@@ -87,64 +87,123 @@
          HERO SECTION: GALACTIC CORE
          ========================================================================== -->
     <section id="hero" class="hero-section">
-      <div class="container hero-content">
+      <div class="container hero-container-grid">
         
-        <!-- Holographic Beacon Badge -->
-        <div class="holo-badge">
-          <span class="beacon-pulse"></span>
-          <span class="badge-text">SECTOR 7 • FULL STACK & CREATIVE ARCHITECT</span>
+        <!-- Left Column: Copy & Command Center -->
+        <div class="hero-text-col">
+          <!-- Holographic Beacon Badge -->
+          <div class="holo-badge">
+            <span class="beacon-pulse"></span>
+            <span class="badge-text">SECTOR 7 • FULL STACK & CREATIVE ARCHITECT</span>
+          </div>
+
+          <!-- Name Title -->
+          <h1 class="hero-title">
+            <span class="name-glow">HAMMADULLAH</span>
+          </h1>
+
+          <!-- Typing Dynamic Subtitle -->
+          <div class="hero-subtitle">
+            <span>Commanding Digital Realities as</span>
+            <span class="typing-text">Full Stack Web Architect</span>
+          </div>
+
+          <!-- Bio Description -->
+          <p class="hero-description">
+            Bridging computational engineering with celestial 3D web experiences. Crafting scalable full-stack applications, intelligent AI architectures, and interactive WebGL worlds that transcend ordinary digital horizons.
+          </p>
+
+          <!-- Starship Telemetry HUD Widget -->
+          <div class="hero-telemetry-hud">
+            <div class="telemetry-item">
+              <i class="fas fa-satellite telemetry-icon"></i>
+              <span>Coordinates: <strong class="telemetry-val">Milky Way • Sector 7</strong></span>
+            </div>
+            <div class="telemetry-item">
+              <i class="fas fa-bolt telemetry-icon"></i>
+              <span>Warp Core: <strong class="telemetry-val">100% Nominal</strong></span>
+            </div>
+            <div class="telemetry-item">
+              <i class="fas fa-signal telemetry-icon"></i>
+              <span>Status: <strong class="telemetry-val" style="color:var(--neon-emerald);">Ready for Missions</strong></span>
+            </div>
+          </div>
+
+          <!-- Hero Actions -->
+          <div class="hero-actions">
+            <a href="#projects" class="cosmic-btn-primary">
+              <i class="fas fa-rocket"></i> Explore Artifacts
+            </a>
+            <a href="#contact" class="cosmic-btn-secondary">
+              <i class="fas fa-paper-plane"></i> Initiate Uplink
+            </a>
+          </div>
         </div>
 
-        <!-- Name Title -->
-        <h1 class="hero-title">
-          <span class="name-glow">HAMMADULLAH</span>
-        </h1>
+        <!-- Right Column: 3D Holographic Animated Portrait -->
+        <div class="hero-portrait-col">
+          <div class="hologram-3d-scene">
+            
+            <!-- Cosmic Orbital Rings -->
+            <div class="portrait-orbital-ring ring-1"></div>
+            <div class="portrait-orbital-ring ring-2"></div>
+            <div class="portrait-orbital-ring ring-3"></div>
 
-        <!-- Typing Dynamic Subtitle -->
-        <div class="hero-subtitle">
-          <span>Commanding Digital Realities as</span>
-          <span class="typing-text">Full Stack Web Architect</span>
+            <!-- Glowing Nebula Core Backdrop -->
+            <div class="portrait-nebula-glow"></div>
+
+            <!-- 3D Tilting Card Frame -->
+            <div class="hologram-card-3d" id="hero-portrait-card">
+              <!-- HUD Corner Target Accents -->
+              <div class="hud-corner top-left"></div>
+              <div class="hud-corner top-right"></div>
+              <div class="hud-corner bottom-left"></div>
+              <div class="hud-corner bottom-right"></div>
+
+              <!-- Scanning Laser Line -->
+              <div class="hologram-laser-scan"></div>
+
+              <!-- Portrait Image -->
+              <div class="portrait-img-container">
+                <img src="assets/hammadullah.jpg" alt="Hammadullah - Full Stack Developer & 3D Web Architect" class="hologram-portrait-img">
+                <div class="portrait-hologram-glitch"></div>
+              </div>
+
+              <!-- HUD Bottom Bar -->
+              <div class="portrait-hud-bottom">
+                <div class="hud-pulse-dot"></div>
+                <span class="hud-pilot-id">PILOT: HAMMADULLAH // ARCHITECT_V3</span>
+              </div>
+            </div>
+
+            <!-- Floating 3D Micro-Badges -->
+            <div class="floating-badge badge-top-right">
+              <i class="fas fa-code"></i>
+              <span>Full Stack Lead</span>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <i class="fas fa-cubes"></i>
+              <span>Three.js &amp; 3D WebGL</span>
+            </div>
+
+            <div class="floating-badge badge-mid-left">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Malik Digital Founder</span>
+            </div>
+
+          </div>
         </div>
 
-        <!-- Bio Description -->
-        <p class="hero-description">
-          Bridging computational engineering with celestial 3D web experiences. Crafting scalable full-stack applications, intelligent AI architectures, and interactive WebGL worlds that transcend ordinary digital horizons.
-        </p>
-
-        <!-- Starship Telemetry HUD Widget -->
-        <div class="hero-telemetry-hud">
-          <div class="telemetry-item">
-            <i class="fas fa-satellite telemetry-icon"></i>
-            <span>Coordinates: <strong class="telemetry-val">Milky Way • Sector 7</strong></span>
-          </div>
-          <div class="telemetry-item">
-            <i class="fas fa-bolt telemetry-icon"></i>
-            <span>Warp Core: <strong class="telemetry-val">100% Nominal</strong></span>
-          </div>
-          <div class="telemetry-item">
-            <i class="fas fa-signal telemetry-icon"></i>
-            <span>Status: <strong class="telemetry-val" style="color:var(--neon-emerald);">Ready for Missions</strong></span>
-          </div>
-        </div>
-
-        <!-- Hero Actions -->
-        <div class="hero-actions">
-          <a href="#projects" class="cosmic-btn-primary">
-            <i class="fas fa-rocket"></i> Explore Artifacts
-          </a>
-          <a href="#contact" class="cosmic-btn-secondary">
-            <i class="fas fa-paper-plane"></i> Initiate Uplink
-          </a>
-        </div>
-
-        <!-- Scroll Mouse Indicator -->
-        <a href="#about" class="scroll-orbit-indicator" aria-label="Scroll Down to About Section">
-          <div class="orbit-mouse">
-            <div class="orbit-wheel"></div>
-          </div>
-          <span>Scroll Orbit</span>
-        </a>
       </div>
+
+      <!-- Scroll Mouse Indicator -->
+      <a href="#about" class="scroll-orbit-indicator" aria-label="Scroll Down to About Section">
+        <div class="orbit-mouse">
+          <div class="orbit-wheel"></div>
+        </div>
+        <span>Scroll Orbit</span>
+      </a>
     </section>
 
     <!-- ==========================================================================

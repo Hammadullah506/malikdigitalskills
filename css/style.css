@@ -432,14 +432,322 @@ body {
   padding-bottom: 60px;
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
+.hero-container-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  text-align: center;
+  gap: 48px;
   position: relative;
   z-index: 5;
-  max-width: 900px;
+  width: 100%;
+}
+
+.hero-text-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* ==========================================================================
+   3D HOLOGRAPHIC PORTRAIT SCENE (RIGHT SIDE)
+   ========================================================================== */
+.hero-portrait-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.hologram-3d-scene {
+  position: relative;
+  width: 360px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+/* Rotating Cosmic Orbital Rings */
+.portrait-orbital-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 1.5px dashed;
+  transform-style: preserve-3d;
+}
+
+.portrait-orbital-ring.ring-1 {
+  width: 420px;
+  height: 420px;
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
+  animation: orbitRing3D 16s linear infinite;
+}
+
+.portrait-orbital-ring.ring-2 {
+  width: 480px;
+  height: 480px;
+  border-color: rgba(121, 40, 202, 0.35);
+  box-shadow: 0 0 25px rgba(121, 40, 202, 0.2);
+  animation: orbitRing3DReverse 22s linear infinite;
+}
+
+.portrait-orbital-ring.ring-3 {
+  width: 380px;
+  height: 380px;
+  border-color: rgba(255, 0, 127, 0.3);
+  animation: orbitRing3D 28s linear infinite;
+}
+
+@keyframes orbitRing3D {
+  0% { transform: rotateX(65deg) rotateY(15deg) rotateZ(0deg); }
+  100% { transform: rotateX(65deg) rotateY(15deg) rotateZ(360deg); }
+}
+
+@keyframes orbitRing3DReverse {
+  0% { transform: rotateX(-60deg) rotateY(-20deg) rotateZ(360deg); }
+  100% { transform: rotateX(-60deg) rotateY(-20deg) rotateZ(0deg); }
+}
+
+/* Glowing Nebula Core Backdrop */
+.portrait-nebula-glow {
+  position: absolute;
+  width: 280px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.3) 0%, rgba(121, 40, 202, 0.25) 50%, transparent 75%);
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+  animation: nebulaPulse 6s ease-in-out infinite alternate;
+}
+
+@keyframes nebulaPulse {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+
+/* 3D Hologram Main Card Frame */
+.hologram-card-3d {
+  position: relative;
+  width: 300px;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  background: rgba(13, 8, 38, 0.7);
+  border: 2px solid rgba(0, 242, 254, 0.5);
+  box-shadow: 
+    0 20px 50px rgba(3, 0, 20, 0.9),
+    0 0 30px rgba(0, 242, 254, 0.35),
+    inset 0 0 25px rgba(0, 242, 254, 0.15);
+  overflow: hidden;
+  z-index: 2;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transform-style: preserve-3d;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: float3DCard 6s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+.hologram-card-3d:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 
+    0 25px 60px rgba(0, 242, 254, 0.4),
+    0 0 45px rgba(0, 242, 254, 0.6),
+    inset 0 0 35px rgba(0, 242, 254, 0.25);
+}
+
+@keyframes float3DCard {
+  0% { transform: translateY(0px) rotateY(-4deg) rotateX(4deg); }
+  50% { transform: translateY(-12px) rotateY(4deg) rotateX(-2deg); }
+  100% { transform: translateY(0px) rotateY(-4deg) rotateX(4deg); }
+}
+
+/* HUD Corner Accents */
+.hud-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--neon-cyan);
+  z-index: 5;
+  pointer-events: none;
+}
+.hud-corner.top-left { top: 8px; left: 8px; border-top: 2px solid; border-left: 2px solid; }
+.hud-corner.top-right { top: 8px; right: 8px; border-top: 2px solid; border-right: 2px solid; }
+.hud-corner.bottom-left { bottom: 8px; left: 8px; border-bottom: 2px solid; border-left: 2px solid; }
+.hud-corner.bottom-right { bottom: 8px; right: 8px; border-bottom: 2px solid; border-right: 2px solid; }
+
+/* Holographic Laser Scanning Line */
+.hologram-laser-scan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), #ffffff, var(--neon-cyan), transparent);
+  box-shadow: 0 0 15px var(--neon-cyan), 0 0 25px var(--neon-cyan);
+  z-index: 4;
+  pointer-events: none;
+  animation: laserScan 3.5s ease-in-out infinite;
+}
+
+@keyframes laserScan {
+  0% { top: 0%; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* Portrait Image Container */
+.portrait-img-container {
+  width: 100%;
+  height: calc(100% - 42px);
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: contrast(1.06) brightness(1.02);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.hologram-card-3d:hover .hologram-portrait-img {
+  transform: scale(1.04);
+}
+
+.portrait-hologram-glitch {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 65%, rgba(0, 242, 254, 0.15) 100%);
+  pointer-events: none;
+}
+
+/* Bottom HUD Bar */
+.portrait-hud-bottom {
+  height: 42px;
+  background: rgba(8, 3, 33, 0.95);
+  border-top: 1px solid rgba(0, 242, 254, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.hud-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--neon-emerald);
+  box-shadow: 0 0 8px var(--neon-emerald);
+  animation: pulse-core 1.5s infinite alternate;
+}
+
+.hud-pilot-id {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  color: var(--neon-cyan);
+  white-space: nowrap;
+}
+
+/* Floating 3D Micro-Badges */
+.floating-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(13, 8, 38, 0.85);
+  border: 1px solid rgba(0, 242, 254, 0.4);
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 242, 254, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-family: var(--font-sub);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffffff;
+  z-index: 6;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: floatBadgeItem 4s ease-in-out infinite alternate;
+}
+
+.floating-badge i {
+  color: var(--neon-cyan);
+}
+
+.badge-top-right {
+  top: -10px;
+  right: -25px;
+  animation-delay: 0.4s;
+}
+
+.badge-bottom-left {
+  bottom: 25px;
+  left: -35px;
+  border-color: rgba(121, 40, 202, 0.5);
+  animation-delay: 1.2s;
+}
+
+.badge-bottom-left i {
+  color: #ff007f;
+}
+
+.badge-mid-left {
+  top: 130px;
+  left: -40px;
+  border-color: rgba(255, 183, 3, 0.5);
+  animation-delay: 0.8s;
+}
+
+.badge-mid-left i {
+  color: var(--neon-gold);
+}
+
+@keyframes floatBadgeItem {
+  0% { transform: translateY(0px) translateZ(30px); }
+  100% { transform: translateY(-8px) translateZ(45px); }
+}
+
+/* Responsive adjustment for Hero grid */
+@media (max-width: 992px) {
+  .hero-container-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-text-col {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-portrait-col {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .hologram-3d-scene {
+    width: 280px;
+    height: 360px;
+  }
+
+  .hologram-card-3d {
+    width: 250px;
+    height: 320px;
+  }
+
+  .badge-top-right { right: -10px; }
+  .badge-bottom-left { left: -15px; }
+  .badge-mid-left { left: -20px; }
 }
 
 /* Holographic Badge */

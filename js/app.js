@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectModals();
   initContactForm();
   initScrollReveal();
+  initPortrait3DTilt();
 });
 
 /* ==========================================================================
@@ -547,3 +548,35 @@ function initScrollReveal() {
 
   reveals.forEach(el => revealObserver.observe(el));
 }
+
+/* ==========================================================================
+   12. 3D HOLOGRAPHIC PORTRAIT MOUSE TILT
+   ========================================================================== */
+function initPortrait3DTilt() {
+  const card = document.getElementById('hero-portrait-card');
+  const scene = document.querySelector('.hologram-3d-scene');
+  if (!card || !scene) return;
+
+  scene.addEventListener('mousemove', (e) => {
+    const rect = scene.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -16;
+    const rotateY = ((x - centerX) / centerX) * 16;
+
+    card.style.animation = 'none';
+    card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.05, 1.05, 1.05)`;
+  });
+
+  scene.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    setTimeout(() => {
+      card.style.animation = 'float3DCard 6s ease-in-out infinite alternate';
+    }, 300);
+  });
+}
+
