@@ -8,7 +8,7 @@ class GalaxyEngine {
   constructor() {
     this.container = document.getElementById('galaxy-canvas-container');
     this.canvas = document.getElementById('galaxy-canvas');
-    if (!this.canvas) return;
+    if (!this.canvas || typeof THREE === 'undefined') return;
 
     // Three.js Core
     this.scene = null;
@@ -473,5 +473,17 @@ class GalaxyEngine {
   }
 }
 
-// Global Galaxy Instance
-window.galaxyEngine = new GalaxyEngine();
+// Safe Global Galaxy Instance Initialization
+function initGalaxyEngine() {
+  if (!window.galaxyEngine || !window.galaxyEngine.renderer) {
+    window.galaxyEngine = new GalaxyEngine();
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initGalaxyEngine);
+} else {
+  initGalaxyEngine();
+}
+window.addEventListener('load', initGalaxyEngine);
+
