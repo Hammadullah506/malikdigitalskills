@@ -434,9 +434,9 @@ body {
 
 .hero-container-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  gap: 48px;
+  gap: 32px;
   position: relative;
   z-index: 5;
   width: 100%;
@@ -450,23 +450,27 @@ body {
 }
 
 /* ==========================================================================
-   3D HOLOGRAPHIC PORTRAIT SCENE (RIGHT SIDE)
+   3D HOLOGRAPHIC CIRCULAR PORTRAIT SCENE (RIGHT SIDE)
    ========================================================================== */
 .hero-portrait-col {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  padding-right: 50px;
   perspective: 1200px;
+  position: relative;
+  width: 100%;
 }
 
 .hologram-3d-scene {
   position: relative;
-  width: 360px;
-  height: 440px;
+  width: 280px;
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
   transform-style: preserve-3d;
+  flex-shrink: 0;
 }
 
 /* Rotating Cosmic Orbital Rings */
@@ -479,25 +483,25 @@ body {
 }
 
 .portrait-orbital-ring.ring-1 {
-  width: 420px;
-  height: 420px;
-  border-color: rgba(0, 242, 254, 0.4);
-  box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
+  width: 320px;
+  height: 320px;
+  border-color: rgba(0, 242, 254, 0.45);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
   animation: orbitRing3D 16s linear infinite;
 }
 
 .portrait-orbital-ring.ring-2 {
-  width: 480px;
-  height: 480px;
-  border-color: rgba(121, 40, 202, 0.35);
-  box-shadow: 0 0 25px rgba(121, 40, 202, 0.2);
+  width: 360px;
+  height: 360px;
+  border-color: rgba(121, 40, 202, 0.4);
+  box-shadow: 0 0 20px rgba(121, 40, 202, 0.2);
   animation: orbitRing3DReverse 22s linear infinite;
 }
 
 .portrait-orbital-ring.ring-3 {
-  width: 380px;
-  height: 380px;
-  border-color: rgba(255, 0, 127, 0.3);
+  width: 290px;
+  height: 290px;
+  border-color: rgba(255, 0, 127, 0.35);
   animation: orbitRing3D 28s linear infinite;
 }
 
@@ -514,10 +518,11 @@ body {
 /* Glowing Nebula Core Backdrop */
 .portrait-nebula-glow {
   position: absolute;
-  width: 280px;
-  height: 340px;
-  background: radial-gradient(circle, rgba(0, 242, 254, 0.3) 0%, rgba(121, 40, 202, 0.25) 50%, transparent 75%);
-  filter: blur(40px);
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.35) 0%, rgba(121, 40, 202, 0.25) 55%, transparent 75%);
+  filter: blur(35px);
   z-index: 1;
   pointer-events: none;
   animation: nebulaPulse 6s ease-in-out infinite alternate;
@@ -528,18 +533,22 @@ body {
   100% { transform: scale(1.15); opacity: 1; }
 }
 
-/* 3D Hologram Circular Portal Frame */
+/* 3D Hologram Circular Portal Frame - Fixed Size */
 .hologram-circle-3d {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: 260px;
+  height: 260px;
+  min-width: 260px;
+  min-height: 260px;
+  max-width: 260px;
+  max-height: 260px;
   border-radius: 50%;
-  padding: 8px;
-  background: linear-gradient(135deg, rgba(0, 242, 254, 0.8), rgba(121, 40, 202, 0.6), rgba(255, 0, 127, 0.8));
+  padding: 6px;
+  background: linear-gradient(135deg, #00f2fe 0%, #7928ca 50%, #ff007f 100%);
   box-shadow: 
-    0 20px 50px rgba(3, 0, 20, 0.9),
-    0 0 35px rgba(0, 242, 254, 0.5),
-    0 0 70px rgba(121, 40, 202, 0.35);
+    0 15px 40px rgba(3, 0, 20, 0.9),
+    0 0 35px rgba(0, 242, 254, 0.6),
+    0 0 65px rgba(121, 40, 202, 0.4);
   overflow: hidden;
   z-index: 2;
   transform-style: preserve-3d;
@@ -549,18 +558,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .hologram-circle-3d:hover {
   box-shadow: 
-    0 25px 60px rgba(0, 242, 254, 0.6),
-    0 0 55px rgba(0, 242, 254, 0.8),
-    0 0 90px rgba(255, 0, 127, 0.5);
+    0 20px 50px rgba(0, 242, 254, 0.7),
+    0 0 50px rgba(0, 242, 254, 0.9),
+    0 0 85px rgba(255, 0, 127, 0.6);
 }
 
 @keyframes float3DCircle {
   0% { transform: translateY(0px) rotateY(-5deg) rotateX(5deg); }
-  50% { transform: translateY(-14px) rotateY(5deg) rotateX(-3deg); }
+  50% { transform: translateY(-12px) rotateY(5deg) rotateX(-3deg); }
   100% { transform: translateY(0px) rotateY(-5deg) rotateX(5deg); }
 }
 
@@ -569,7 +579,7 @@ body {
   position: absolute;
   inset: 2px;
   border-radius: 50%;
-  border: 2px dashed rgba(255, 255, 255, 0.6);
+  border: 2px dashed rgba(255, 255, 255, 0.7);
   pointer-events: none;
   animation: rotateEnergyRing 12s linear infinite;
   z-index: 3;
@@ -588,13 +598,18 @@ body {
   overflow: hidden;
   position: relative;
   background: #080321;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hologram-circle-img {
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 15%;
   border-radius: 50%;
   display: block;
   filter: contrast(1.05) brightness(1.02);
@@ -635,14 +650,6 @@ body {
   100% { top: 95%; opacity: 0; }
 }
 
-.hud-pilot-id {
-  font-family: var(--font-display);
-  font-size: 0.68rem;
-  letter-spacing: 1.5px;
-  color: var(--neon-cyan);
-  white-space: nowrap;
-}
-
 /* Floating 3D Micro-Badges */
 .floating-badge {
   position: absolute;
@@ -650,14 +657,14 @@ body {
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background: rgba(13, 8, 38, 0.85);
+  background: rgba(13, 8, 38, 0.88);
   border: 1px solid rgba(0, 242, 254, 0.4);
   border-radius: var(--radius-full);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 242, 254, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   font-family: var(--font-sub);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: #ffffff;
   z-index: 6;
@@ -672,13 +679,13 @@ body {
 
 .badge-top-right {
   top: -10px;
-  right: -25px;
+  right: -15px;
   animation-delay: 0.4s;
 }
 
 .badge-bottom-left {
-  bottom: 25px;
-  left: -35px;
+  bottom: 10px;
+  left: -25px;
   border-color: rgba(121, 40, 202, 0.5);
   animation-delay: 1.2s;
 }
@@ -688,8 +695,8 @@ body {
 }
 
 .badge-mid-left {
-  top: 130px;
-  left: -40px;
+  top: 105px;
+  left: -35px;
   border-color: rgba(255, 183, 3, 0.5);
   animation-delay: 0.8s;
 }
@@ -718,22 +725,32 @@ body {
 
   .hero-portrait-col {
     order: -1;
+    justify-content: center;
+    padding-right: 0;
     margin-bottom: 20px;
   }
 
   .hologram-3d-scene {
-    width: 280px;
-    height: 360px;
+    width: 240px;
+    height: 240px;
   }
 
-  .hologram-card-3d {
-    width: 250px;
-    height: 320px;
+  .hologram-circle-3d {
+    width: 220px;
+    height: 220px;
+    min-width: 220px;
+    min-height: 220px;
+    max-width: 220px;
+    max-height: 220px;
   }
 
-  .badge-top-right { right: -10px; }
-  .badge-bottom-left { left: -15px; }
-  .badge-mid-left { left: -20px; }
+  .portrait-orbital-ring.ring-1 { width: 260px; height: 260px; }
+  .portrait-orbital-ring.ring-2 { width: 300px; height: 300px; }
+  .portrait-orbital-ring.ring-3 { width: 240px; height: 240px; }
+
+  .badge-top-right { right: -5px; }
+  .badge-bottom-left { left: -10px; }
+  .badge-mid-left { left: -15px; }
 }
 
 /* Holographic Badge */
