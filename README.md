@@ -5,13 +5,16 @@
 ![Cosmic 3D Portfolio](assets/malikdigital.svg)
 
 [![GitHub](https://img.shields.io/badge/GitHub-Hammadullah506-00f2fe?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Hammadullah506)
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-3D_Galaxy_View-7928ca?style=for-the-badge&logo=three.js&logoColor=white)](https://hammadullah506.github.io/malikdigitalskills/)
 [![Live Platform](https://img.shields.io/badge/Live_Project-Malik_Digital_Skills-00ffcc?style=for-the-badge&logo=googlechrome&logoColor=white)](https://malikdigitalskill.lovable.app/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Connect-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/923475765612)
 [![Email](https://img.shields.io/badge/Email-Get_in_Touch-ff007f?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hammadullahnaseeb@gmail.com)
 
 **Commanding Digital Realities • Full Stack Web Architect • 3D WebGL & Creative Technologist**
 
-[Live Portfolio Demo](https://github.com/Hammadullah506) • [Featured Project: Malik Digital Skills](https://malikdigitalskill.lovable.app/) • [Explore Source Code](https://github.com/Hammadullah506/malikdigitalskills)
+🌌 **Live Interactive 3D Galaxy View**: [https://hammadullah506.github.io/malikdigitalskills/](https://hammadullah506.github.io/malikdigitalskills/)  
+🚀 **Featured Project Platform**: [https://malikdigitalskill.lovable.app/](https://malikdigitalskill.lovable.app/)  
+📂 **Source Code Repository**: [https://github.com/Hammadullah506/malikdigitalskills](https://github.com/Hammadullah506/malikdigitalskills)
 
 </div>
 
