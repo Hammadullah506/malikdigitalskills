@@ -2108,104 +2108,38 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVE MEDIA QUERIES
+   RESPONSIVE MEDIA QUERIES (TABLETS & MOBILE SMARTPHONES)
    ========================================================================== */
 @media (max-width: 992px) {
-  .hero-container-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 30px;
+  /* Prevent Any Horizontal Overflow */
+  html, body, #content-wrapper, main, section, .hero-section {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
   }
 
-  .hero-text-col {
+  .container {
+    padding: 0 16px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Navigation: Switch to Mobile Drawer */
+  .mobile-nav-toggle {
+    display: flex !important;
     align-items: center;
-    text-align: center;
-  }
-
-  .hero-portrait-col {
-    order: -1;
     justify-content: center;
-    padding-right: 0;
-    margin: 10px auto 20px;
-    width: 100%;
+    width: 38px;
+    height: 38px;
   }
 
-  .hologram-3d-scene {
-    width: 240px;
-    height: 240px;
+  .brand-suffix {
+    display: none;
   }
 
-  .hologram-circle-3d {
-    width: 210px;
-    height: 210px;
-    min-width: 210px;
-    min-height: 210px;
-    max-width: 210px;
-    max-height: 210px;
-  }
-
-  .portrait-orbital-ring.ring-1 { width: 250px; height: 250px; }
-  .portrait-orbital-ring.ring-2 { width: 285px; height: 285px; }
-  .portrait-orbital-ring.ring-3 { width: 225px; height: 225px; }
-
-  .badge-top-right { top: -8px; right: -10px; font-size: 0.7rem; padding: 4px 10px; }
-  .badge-bottom-left { bottom: 5px; left: -15px; font-size: 0.7rem; padding: 4px 10px; }
-  .badge-mid-left { top: 85px; left: -20px; font-size: 0.7rem; padding: 4px 10px; }
-
-  .about-grid, .contact-uplink-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .timeline-track::before {
-    left: 20px;
-  }
-  
-  .timeline-node-item {
-    width: 100%;
-    padding-left: 56px !important;
-    padding-right: 0 !important;
-    text-align: left !important;
-  }
-  
-  .timeline-node-item .timeline-pulsar-dot {
-    left: 11px !important;
-    right: auto !important;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --nav-height: 70px;
-  }
-
-  .hero-section {
-    padding-top: calc(var(--nav-height) + 20px);
-    padding-bottom: 40px;
-  }
-
-  .hero-title {
-    font-size: clamp(2.2rem, 9vw, 3.2rem);
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem;
-    gap: 6px;
-  }
-
-  .hero-description {
-    font-size: 0.98rem;
-    padding: 0 10px;
-    margin-bottom: 24px;
-  }
-
-  .hero-telemetry-hud {
-    gap: 12px;
-    padding: 10px 16px;
-    margin-bottom: 28px;
-  }
-
-  .telemetry-item {
-    font-size: 0.78rem;
+  .cosmic-brand {
+    font-size: 1.05rem;
+    gap: 8px;
   }
 
   .nav-menu {
@@ -2217,95 +2151,250 @@ body {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     flex-direction: column;
-    padding: 30px 24px;
-    gap: 18px;
+    padding: 24px 20px;
+    gap: 14px;
     border-bottom: 1px solid rgba(0, 242, 254, 0.25);
-    transform: translateY(-150%);
+    transform: translateY(-160%);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
-    z-index: 99;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.95);
+    z-index: 999;
   }
 
   .nav-menu.open {
     transform: translateY(0);
   }
 
-  .mobile-nav-toggle {
-    display: block;
+  /* Hero Section: Centered & Flexible */
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 16px);
+    padding-bottom: 40px;
+    min-height: auto;
   }
 
-  .skills-constellation-grid {
-    grid-template-columns: 1fr;
+  .hero-container-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  /* Right Column (Avatar): Centered on Top */
+  .hero-portrait-col {
+    order: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 !important;
+    margin: 0 auto 10px auto;
+    perspective: none;
   }
 
-  .about-stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
+  .hologram-3d-scene {
+    width: 220px;
+    height: 220px;
+    max-width: 100%;
+    margin: 0 auto;
+    transform-style: flat;
   }
 
-  .stat-telemetry-box {
-    padding: 18px 14px;
+  .hologram-circle-3d {
+    width: 170px;
+    height: 170px;
+    min-width: 170px;
+    min-height: 170px;
+    max-width: 170px;
+    max-height: 170px;
+    margin: 0 auto;
+    padding: 4px;
+    box-shadow: 
+      0 10px 30px rgba(3, 0, 20, 0.9),
+      0 0 25px rgba(0, 242, 254, 0.5),
+      0 0 45px rgba(121, 40, 202, 0.3);
   }
 
-  .stat-counter {
-    font-size: 2rem;
+  .portrait-orbital-ring.ring-1 { width: 200px; height: 200px; }
+  .portrait-orbital-ring.ring-2 { width: 225px; height: 225px; }
+  .portrait-orbital-ring.ring-3 { display: none; }
+
+  .portrait-nebula-glow {
+    width: 190px;
+    height: 190px;
   }
-  
+
+  /* Micro Badges neatly contained */
+  .floating-badge {
+    padding: 4px 10px;
+    font-size: 0.68rem;
+    gap: 6px;
+  }
+
+  .badge-top-right { top: -6px; right: -5px; }
+  .badge-bottom-left { bottom: -4px; left: -5px; }
+  .badge-mid-left { display: none; }
+
+  /* Left Column: Fully Contained Typography */
+  .hero-text-col {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .holo-badge {
+    max-width: 95%;
+    margin: 0 auto 16px auto;
+    padding: 5px 12px;
+  }
+
+  .badge-text {
+    font-size: 0.68rem;
+    letter-spacing: 0.8px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 7.5vw, 2.7rem);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    width: 100%;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  .name-glow {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 14px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-description {
+    font-size: 0.92rem;
+    padding: 0 8px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-telemetry-hud {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 12px;
+    gap: 8px;
+    margin: 0 auto 24px auto;
+    flex-direction: column;
+    border-radius: var(--radius-sm);
+  }
+
+  .telemetry-item {
+    font-size: 0.76rem;
+  }
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
-    gap: 14px;
+    gap: 12px;
   }
 
   .cosmic-btn-primary, .cosmic-btn-secondary {
     width: 100%;
     justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.88rem;
+  }
+
+  /* Grid Layouts Stacked on Tablets/Mobile */
+  .about-grid, .contact-uplink-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .skills-constellation-grid, .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .stat-telemetry-box {
+    padding: 14px 10px;
+  }
+
+  .stat-counter {
+    font-size: 1.8rem;
+  }
+
+  .timeline-track::before {
+    left: 16px;
+  }
+  
+  .timeline-node-item {
+    width: 100%;
+    padding-left: 46px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+  
+  .timeline-node-item .timeline-pulsar-dot {
+    left: 7px !important;
+    right: auto !important;
   }
 
   .cosmic-modal-card {
-    padding: 24px 18px;
+    padding: 20px 16px;
     max-height: 85vh;
   }
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 10px);
+  }
+
   .hologram-3d-scene {
-    width: 200px;
-    height: 200px;
+    width: 190px;
+    height: 190px;
   }
 
   .hologram-circle-3d {
-    width: 180px;
-    height: 180px;
-    min-width: 180px;
-    min-height: 180px;
-    max-width: 180px;
-    max-height: 180px;
+    width: 155px;
+    height: 155px;
+    min-width: 155px;
+    min-height: 155px;
+    max-width: 155px;
+    max-height: 155px;
   }
 
-  .portrait-orbital-ring.ring-1 { width: 210px; height: 210px; }
-  .portrait-orbital-ring.ring-2 { width: 240px; height: 240px; }
-  .portrait-orbital-ring.ring-3 { width: 190px; height: 190px; }
+  .portrait-orbital-ring.ring-1 { width: 180px; height: 180px; }
+  .portrait-orbital-ring.ring-2 { width: 205px; height: 205px; }
 
-  .badge-top-right { top: -6px; right: -5px; font-size: 0.65rem; }
-  .badge-bottom-left { bottom: 0px; left: -10px; font-size: 0.65rem; }
-  .badge-mid-left { top: 65px; left: -15px; font-size: 0.65rem; }
+  .hero-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
 
   .about-stats-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero-title {
-    font-size: 2.1rem;
-    letter-spacing: 1px;
-  }
-
-  .badge-text {
-    font-size: 0.7rem;
-    letter-spacing: 1px;
   }
 }
