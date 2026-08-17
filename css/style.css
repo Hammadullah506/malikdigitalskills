@@ -5,38 +5,38 @@
    ========================================================================== */
 
 :root {
-  /* Cosmic Color Palette */
-  --bg-space: #030014;
-  --bg-space-secondary: #080321;
-  --bg-card: rgba(13, 8, 38, 0.65);
-  --bg-card-hover: rgba(22, 14, 62, 0.85);
-  --bg-card-border: rgba(120, 90, 255, 0.25);
-  --bg-card-border-glow: rgba(0, 242, 254, 0.6);
+  /* Realistic Premium Dark Slate Palette */
+  --bg-space: #090c15;
+  --bg-space-secondary: #0f1422;
+  --bg-card: rgba(15, 20, 34, 0.75);
+  --bg-card-hover: rgba(22, 30, 50, 0.88);
+  --bg-card-border: rgba(255, 255, 255, 0.09);
+  --bg-card-border-glow: rgba(56, 189, 248, 0.45);
 
-  /* Neon Galaxy Accents */
-  --neon-cyan: #00f2fe;
-  --neon-purple: #7928ca;
-  --neon-magenta: #ff007f;
-  --neon-blue: #4facfe;
-  --neon-gold: #ffb703;
-  --neon-emerald: #00ffcc;
+  /* Refined High-Tech Modern Accents */
+  --neon-cyan: #38bdf8;
+  --neon-purple: #6366f1;
+  --neon-magenta: #8b5cf6;
+  --neon-blue: #2563eb;
+  --neon-gold: #f59e0b;
+  --neon-emerald: #10b981;
 
-  /* Current Active Theme Primary/Secondary (Dynamically updated via JS) */
-  --theme-primary: #00f2fe;
-  --theme-secondary: #7928ca;
-  --theme-glow: rgba(0, 242, 254, 0.4);
+  /* Current Active Theme Primary/Secondary */
+  --theme-primary: #38bdf8;
+  --theme-secondary: #6366f1;
+  --theme-glow: rgba(56, 189, 248, 0.35);
 
   /* Typography Colors */
-  --text-primary: #f0f4fd;
+  --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
   --text-highlight: #38bdf8;
 
   /* Gradients */
-  --grad-galaxy: linear-gradient(135deg, #00f2fe 0%, #7928ca 50%, #ff007f 100%);
-  --grad-nebula: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(121, 40, 202, 0.15));
-  --grad-card-border: linear-gradient(135deg, rgba(0, 242, 254, 0.5), rgba(121, 40, 202, 0.2), transparent);
-  --grad-glow-btn: linear-gradient(90deg, #00f2fe, #4facfe, #7928ca);
+  --grad-galaxy: linear-gradient(135deg, #38bdf8 0%, #6366f1 50%, #8b5cf6 100%);
+  --grad-nebula: linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(99, 102, 241, 0.12));
+  --grad-card-border: linear-gradient(135deg, rgba(56, 189, 248, 0.4), rgba(99, 102, 241, 0.2), transparent);
+  --grad-glow-btn: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
 
   /* Typography */
   --font-display: 'Orbitron', -apple-system, sans-serif;
@@ -543,12 +543,12 @@ body {
   max-width: 260px;
   max-height: 260px;
   border-radius: 50%;
-  padding: 6px;
-  background: linear-gradient(135deg, #00f2fe 0%, #7928ca 50%, #ff007f 100%);
+  padding: 5px;
+  background: linear-gradient(135deg, #38bdf8 0%, #6366f1 50%, #8b5cf6 100%);
   box-shadow: 
-    0 15px 40px rgba(3, 0, 20, 0.9),
-    0 0 35px rgba(0, 242, 254, 0.6),
-    0 0 65px rgba(121, 40, 202, 0.4);
+    0 15px 40px rgba(0, 0, 0, 0.85),
+    0 0 25px rgba(56, 189, 248, 0.4),
+    0 0 50px rgba(99, 102, 241, 0.25);
   overflow: hidden;
   z-index: 2;
   transform-style: preserve-3d;
@@ -563,9 +563,9 @@ body {
 
 .hologram-circle-3d:hover {
   box-shadow: 
-    0 20px 50px rgba(0, 242, 254, 0.7),
-    0 0 50px rgba(0, 242, 254, 0.9),
-    0 0 85px rgba(255, 0, 127, 0.6);
+    0 20px 50px rgba(0, 0, 0, 0.9),
+    0 0 35px rgba(56, 189, 248, 0.6),
+    0 0 60px rgba(99, 102, 241, 0.4);
 }
 
 @keyframes float3DCircle {
@@ -814,10 +814,10 @@ body {
 }
 
 .name-glow {
-  background: linear-gradient(135deg, #ffffff 0%, #00f2fe 40%, #7928ca 80%, #ff007f 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #38bdf8 45%, #818cf8 80%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 35px rgba(0, 242, 254, 0.4));
+  filter: drop-shadow(0 0 25px rgba(56, 189, 248, 0.3));
   display: block;
 }
 

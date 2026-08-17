@@ -19,43 +19,43 @@ class GalaxyEngine {
     // Galaxy Particle Parameters
     this.params = {
       count: 45000,
-      size: 0.012,
+      size: 0.011,
       radius: 6.5,
       branches: 4,
       spin: 1.2,
       randomness: 0.4,
       power: 3.5,
       speedMultiplier: 1.0,
-      insideColor: '#00f2fe',
-      outsideColor: '#7928ca',
-      coreColor: '#ffffff'
+      insideColor: '#38bdf8',
+      outsideColor: '#6366f1',
+      coreColor: '#f8fafc'
     };
 
     // Theme Palettes
     this.themes = {
       cyan: {
-        insideColor: '#00f2fe',
-        outsideColor: '#7928ca',
-        coreColor: '#ffffff',
-        accentCss: '#00f2fe'
+        insideColor: '#38bdf8',
+        outsideColor: '#6366f1',
+        coreColor: '#f8fafc',
+        accentCss: '#38bdf8'
       },
       magenta: {
-        insideColor: '#ff007f',
-        outsideColor: '#4facfe',
-        coreColor: '#ffffff',
-        accentCss: '#ff007f'
+        insideColor: '#8b5cf6',
+        outsideColor: '#3b82f6',
+        coreColor: '#f8fafc',
+        accentCss: '#8b5cf6'
       },
       gold: {
-        insideColor: '#ffb703',
-        outsideColor: '#fb8500',
-        coreColor: '#fff3b0',
-        accentCss: '#ffb703'
+        insideColor: '#f59e0b',
+        outsideColor: '#d97706',
+        coreColor: '#fffbeb',
+        accentCss: '#f59e0b'
       },
       emerald: {
-        insideColor: '#00ffcc',
-        outsideColor: '#0077b6',
-        coreColor: '#e0fbfc',
-        accentCss: '#00ffcc'
+        insideColor: '#10b981',
+        outsideColor: '#06b6d4',
+        coreColor: '#ecfdf5',
+        accentCss: '#10b981'
       }
     };
 
@@ -81,7 +81,7 @@ class GalaxyEngine {
   init() {
     // 1. Scene setup
     this.scene = new THREE.Scene();
-    this.scene.fog = new THREE.FogExp2(0x030014, 0.08);
+    this.scene.fog = new THREE.FogExp2(0x090c15, 0.07);
 
     // 2. Camera setup
     const aspect = window.innerWidth / window.innerHeight;
