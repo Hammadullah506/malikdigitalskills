@@ -347,8 +347,8 @@ const projectData = {
       'Synthesized Web Audio harmonic feedback with frequency modulation for realistic acoustic button responses.',
       'Integrated 6 dynamic aesthetic themes (Deep Cosmos, Neon Cyberpunk, Solar Flare, Emerald Matrix) and calculation history tape with export.'
     ],
-    liveUrl: 'https://hammadullah506.github.io/Sample_calculator/',
-    githubUrl: 'https://github.com/Hammadullah506/Sample_calculator'
+    liveUrl: 'https://hammadullah506.github.io/omnicalc-pro/',
+    githubUrl: 'https://github.com/Hammadullah506/omnicalc-pro'
   },
   nova: {
     title: 'NovaAI - Neural Intelligence Engine',

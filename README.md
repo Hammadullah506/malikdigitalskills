@@ -8,7 +8,7 @@
 [![Freelancer](https://img.shields.io/badge/Freelancer-Hire_Me-29b2fe?style=for-the-badge&logo=freelancer&logoColor=white)](https://www.freelancer.pk/u/malikhammad1772)
 [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-3D_Galaxy_View-7928ca?style=for-the-badge&logo=three.js&logoColor=white)](https://hammadullah506.github.io/malik_hammadullah_portfolio/)
 [![Live Platform](https://img.shields.io/badge/Live_Project-Malik_Digital_Skills-00ffcc?style=for-the-badge&logo=googlechrome&logoColor=white)](https://malikdigitalskill.lovable.app/)
-[![Live Project](https://img.shields.io/badge/Live_Project-OmniCalc_Pro-8b5cf6?style=for-the-badge&logo=calculator&logoColor=white)](https://hammadullah506.github.io/Sample_calculator/)
+[![Live Project](https://img.shields.io/badge/Live_Project-OmniCalc_Pro-8b5cf6?style=for-the-badge&logo=calculator&logoColor=white)](https://hammadullah506.github.io/omnicalc-pro/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Connect-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/923475765612)
 [![Email](https://img.shields.io/badge/Email-Get_in_Touch-ff007f?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hammadullahnaseeb@gmail.com)
 
@@ -17,7 +17,7 @@
 🌌 **Live Interactive 3D Galaxy View**: [https://hammadullah506.github.io/malik_hammadullah_portfolio/](https://hammadullah506.github.io/malik_hammadullah_portfolio/)  
 💼 **Hire on Freelancer**: [https://www.freelancer.pk/u/malikhammad1772](https://www.freelancer.pk/u/malikhammad1772)  
 🚀 **Featured EdTech Platform**: [https://malikdigitalskill.lovable.app/](https://malikdigitalskill.lovable.app/)  
-🧮 **OmniCalc Pro Live Suite**: [https://hammadullah506.github.io/Sample_calculator/](https://hammadullah506.github.io/Sample_calculator/)  
+🧮 **OmniCalc Pro Live Suite**: [https://hammadullah506.github.io/omnicalc-pro/](https://hammadullah506.github.io/omnicalc-pro/)  
 📂 **Source Code Repository**: [https://github.com/Hammadullah506/malik_hammadullah_portfolio](https://github.com/Hammadullah506/malik_hammadullah_portfolio)
 
 </div>
@@ -56,9 +56,9 @@ Designed with a sleek **Cosmic Glassmorphism HUD** aesthetic, this portfolio hig
 
 | Project Details | Link |
 | :--- | :--- |
-| **Platform Name** | [OmniCalc Pro Mathematical Suite](https://hammadullah506.github.io/Sample_calculator/) |
-| **Live URL** | [https://hammadullah506.github.io/Sample_calculator/](https://hammadullah506.github.io/Sample_calculator/) |
-| **Source Code** | [https://github.com/Hammadullah506/Sample_calculator](https://github.com/Hammadullah506/Sample_calculator) |
+| **Platform Name** | [OmniCalc Pro Mathematical Suite](https://hammadullah506.github.io/omnicalc-pro/) |
+| **Live URL** | [https://hammadullah506.github.io/omnicalc-pro/](https://hammadullah506.github.io/omnicalc-pro/) |
+| **Source Code** | [https://github.com/Hammadullah506/omnicalc-pro](https://github.com/Hammadullah506/omnicalc-pro) |
 | **Category** | Computational Suite & PWA |
 | **Status** | Production Ready • Multi-Mode Suite |
 | **Key Technologies** | HTML5/CSS3, JavaScript (ES6+), Canvas 2D Grapher, Web Audio API, PWA |
