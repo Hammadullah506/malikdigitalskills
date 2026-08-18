@@ -6,7 +6,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-Hammadullah506-00f2fe?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Hammadullah506)
 [![Freelancer](https://img.shields.io/badge/Freelancer-Hire_Me-29b2fe?style=for-the-badge&logo=freelancer&logoColor=white)](https://www.freelancer.pk/u/malikhammad1772)
-[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-3D_Galaxy_View-7928ca?style=for-the-badge&logo=three.js&logoColor=white)](https://hammadullah506.github.io/malikdigitalskills/)
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-3D_Galaxy_View-7928ca?style=for-the-badge&logo=three.js&logoColor=white)](https://hammadullah506.github.io/malik_hammadullah_portfolio/)
 [![Live Platform](https://img.shields.io/badge/Live_Project-Malik_Digital_Skills-00ffcc?style=for-the-badge&logo=googlechrome&logoColor=white)](https://malikdigitalskill.lovable.app/)
 [![Live Project](https://img.shields.io/badge/Live_Project-OmniCalc_Pro-8b5cf6?style=for-the-badge&logo=calculator&logoColor=white)](https://hammadullah506.github.io/Sample_calculator/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Connect-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/923475765612)
@@ -14,11 +14,11 @@
 
 **Commanding Digital Realities • Full Stack Web Architect • 3D WebGL & Creative Technologist**
 
-🌌 **Live Interactive 3D Galaxy View**: [https://hammadullah506.github.io/malikdigitalskills/](https://hammadullah506.github.io/malikdigitalskills/)  
+🌌 **Live Interactive 3D Galaxy View**: [https://hammadullah506.github.io/malik_hammadullah_portfolio/](https://hammadullah506.github.io/malik_hammadullah_portfolio/)  
 💼 **Hire on Freelancer**: [https://www.freelancer.pk/u/malikhammad1772](https://www.freelancer.pk/u/malikhammad1772)  
 🚀 **Featured EdTech Platform**: [https://malikdigitalskill.lovable.app/](https://malikdigitalskill.lovable.app/)  
 🧮 **OmniCalc Pro Live Suite**: [https://hammadullah506.github.io/Sample_calculator/](https://hammadullah506.github.io/Sample_calculator/)  
-📂 **Source Code Repository**: [https://github.com/Hammadullah506/malikdigitalskills](https://github.com/Hammadullah506/malikdigitalskills)
+📂 **Source Code Repository**: [https://github.com/Hammadullah506/malik_hammadullah_portfolio](https://github.com/Hammadullah506/malik_hammadullah_portfolio)
 
 </div>
 
@@ -106,7 +106,7 @@ Designed with a sleek **Cosmic Glassmorphism HUD** aesthetic, this portfolio hig
 ## 📦 Project Structure
 
 ```bash
-malikdigitalskills/
+malik_hammadullah_portfolio/
 ├── assets/
 │   ├── hammadullah.jpg    # 3D holographic circular portrait photo
 │   ├── malikdigital.svg   # Malik Digital Skills high-tech banner
@@ -136,8 +136,8 @@ To run this project locally on your machine:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Hammadullah506/malikdigitalskills.git
-   cd malikdigitalskills
+   git clone https://github.com/Hammadullah506/malik_hammadullah_portfolio.git
+   cd malik_hammadullah_portfolio
    ```
 
 2. **Launch with any local web server**:
