@@ -8,6 +8,7 @@
 [![Freelancer](https://img.shields.io/badge/Freelancer-Hire_Me-29b2fe?style=for-the-badge&logo=freelancer&logoColor=white)](https://www.freelancer.pk/u/malikhammad1772)
 [![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-3D_Galaxy_View-7928ca?style=for-the-badge&logo=three.js&logoColor=white)](https://hammadullah506.github.io/malikdigitalskills/)
 [![Live Platform](https://img.shields.io/badge/Live_Project-Malik_Digital_Skills-00ffcc?style=for-the-badge&logo=googlechrome&logoColor=white)](https://malikdigitalskill.lovable.app/)
+[![Live Project](https://img.shields.io/badge/Live_Project-OmniCalc_Pro-8b5cf6?style=for-the-badge&logo=calculator&logoColor=white)](https://hammadullah506.github.io/Sample_calculator/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Connect-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/923475765612)
 [![Email](https://img.shields.io/badge/Email-Get_in_Touch-ff007f?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hammadullahnaseeb@gmail.com)
 
@@ -15,7 +16,8 @@
 
 🌌 **Live Interactive 3D Galaxy View**: [https://hammadullah506.github.io/malikdigitalskills/](https://hammadullah506.github.io/malikdigitalskills/)  
 💼 **Hire on Freelancer**: [https://www.freelancer.pk/u/malikhammad1772](https://www.freelancer.pk/u/malikhammad1772)  
-🚀 **Featured Project Platform**: [https://malikdigitalskill.lovable.app/](https://malikdigitalskill.lovable.app/)  
+🚀 **Featured EdTech Platform**: [https://malikdigitalskill.lovable.app/](https://malikdigitalskill.lovable.app/)  
+🧮 **OmniCalc Pro Live Suite**: [https://hammadullah506.github.io/Sample_calculator/](https://hammadullah506.github.io/Sample_calculator/)  
 📂 **Source Code Repository**: [https://github.com/Hammadullah506/malikdigitalskills](https://github.com/Hammadullah506/malikdigitalskills)
 
 </div>
@@ -30,8 +32,9 @@ Designed with a sleek **Cosmic Glassmorphism HUD** aesthetic, this portfolio hig
 
 ---
 
-## 🌟 Featured Project: Malik Digital Skills Platform
+## 🌟 Featured Live Projects
 
+### 1. Malik Digital Skills Platform
 <div align="center">
 
 | Project Details | Link |
@@ -44,11 +47,27 @@ Designed with a sleek **Cosmic Glassmorphism HUD** aesthetic, this portfolio hig
 
 </div>
 
-### Key Capabilities of Malik Digital Skills
 - **11+ Skill-Based Courses**: Vibe Coding, AI & Prompt Engineering, Frontend Web Development, Graphic Design, Shopify E-Commerce, and Freelancing.
 - **Automated Admission Pipeline**: Direct WhatsApp routing for seamless course enrollment and scholarship processing.
 - **Ultra-Responsive UI**: Crafted for instantaneous load times and smooth mobile exploration.
-- **Interactive Student Telemetry**: Verified student reviews, syllabus breakdowns, and pricing calculators.
+
+### 2. OmniCalc Pro — Advanced Mathematical & Financial Suite
+<div align="center">
+
+| Project Details | Link |
+| :--- | :--- |
+| **Platform Name** | [OmniCalc Pro Mathematical Suite](https://hammadullah506.github.io/Sample_calculator/) |
+| **Live URL** | [https://hammadullah506.github.io/Sample_calculator/](https://hammadullah506.github.io/Sample_calculator/) |
+| **Source Code** | [https://github.com/Hammadullah506/Sample_calculator](https://github.com/Hammadullah506/Sample_calculator) |
+| **Category** | Computational Suite & PWA |
+| **Status** | Production Ready • Multi-Mode Suite |
+| **Key Technologies** | HTML5/CSS3, JavaScript (ES6+), Canvas 2D Grapher, Web Audio API, PWA |
+
+</div>
+
+- **7 Specialized Computational Engines**: Standard, Scientific (trigonometry, logarithms), Programmer (64-bit Hex/Dec/Oct/Bin), Financial (EMI, SIP, Compound Interest), Unit Converter, Date & Age calculations, 2D Function Grapher.
+- **Interactive 2D Canvas Graphing**: Real-time mathematical function plotting with continuous coordinate projection and zoom/pan physics.
+- **Web Audio Soundscape & 6 Themes**: Procedural acoustic button responses and customizable visual themes (Deep Cosmos, Neon Cyberpunk, Solar Flare, Emerald Matrix).
 
 ---
 
@@ -91,6 +110,7 @@ malikdigitalskills/
 ├── assets/
 │   ├── hammadullah.jpg    # 3D holographic circular portrait photo
 │   ├── malikdigital.svg   # Malik Digital Skills high-tech banner
+│   ├── omnicalc.svg       # OmniCalc Pro suite high-tech banner
 │   ├── nova.svg           # NovaAI project banner
 │   ├── aetheria.svg       # Aetheria 3D project banner
 │   ├── quantum.svg        # QuantumCommerce project banner

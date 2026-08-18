@@ -335,6 +335,21 @@ const projectData = {
     liveUrl: 'https://malikdigitalskill.lovable.app/',
     githubUrl: 'https://github.com/Hammadullah506'
   },
+  omnicalc: {
+    title: 'OmniCalc Pro — Advanced Mathematical & Financial Suite',
+    category: 'Computational Suite & PWA',
+    status: 'Live Orbit • Production Ready • Multi-Mode Suite',
+    description: 'An ultra-modern, all-in-one computational suite featuring Standard, Scientific (trigonometry, logarithms, hyperbola), Programmer (64-bit Hex/Dec/Oct/Bin bitwise operations), Financial (EMI loan calculator, SIP investment planner, compound interest), Unit Converter, Date & Age calculations, 2D Function Graphing, and Web Audio acoustic synthesis.',
+    stack: ['HTML5 / CSS3', 'JavaScript (ES6+)', 'Canvas 2D Engine', 'Web Audio API', 'PWA / Offline', 'Glassmorphism UI'],
+    highlights: [
+      'Engineered 7 specialized computational engines into a unified, responsive glassmorphism HUD workspace.',
+      'Implemented real-time 2D canvas function grapher supporting custom formulas, zoom, and coordinate projections.',
+      'Synthesized Web Audio harmonic feedback with frequency modulation for realistic acoustic button responses.',
+      'Integrated 6 dynamic aesthetic themes (Deep Cosmos, Neon Cyberpunk, Solar Flare, Emerald Matrix) and calculation history tape with export.'
+    ],
+    liveUrl: 'https://hammadullah506.github.io/Sample_calculator/',
+    githubUrl: 'https://github.com/Hammadullah506/Sample_calculator'
+  },
   nova: {
     title: 'NovaAI - Neural Intelligence Engine',
     category: 'AI / Full Stack Platform',
